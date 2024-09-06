@@ -130,6 +130,7 @@ int analogRead(uint8_t pin)
     static uint8_t last = 0xff;
     if (last != pin)
     {
+        // Reset the ADC to init all regs
         uint32_t peripheral = 0;
         uint8_t pin_index = 0;   // Pin num
         uint8_t adc_channel = 0; // Channel
